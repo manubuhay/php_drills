@@ -22,16 +22,6 @@ session_start(); //starting the session for user profile page
 					$_SESSION['userName'] = $row['pass'];
 					echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
 				}
-			if(!empty($row['userName']) AND empty($row['pass']))
-				{
-					$_SESSION['userName'] = $row['pass'];
-					echo "Password is Empty!";
-				}
-			if(empty($row['userName']) AND !empty($row['pass']))
-				{
-					$_SESSION['userName'] = $row['pass'];
-					echo "Username is Empty!";
-				}
 	}
 	else
 	echo "Error! Fields are empty!";
