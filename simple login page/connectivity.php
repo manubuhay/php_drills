@@ -19,7 +19,7 @@ session_start(); //starting the session for user profile page
 		$row = mysql_fetch_array($query) or die(mysql_error());
 			if(!empty($row['userName']) AND !empty($row['pass']))
 				{
-					$_SESSION['userName'] = $row['pass'];
+					#$_SESSION['userName'] = $row['pass'];
 					echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
 				}
 	}
