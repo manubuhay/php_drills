@@ -29,5 +29,4 @@ session_start(); //starting the session for user profile page
 
 if(isset($_POST['submit']))
 	SignIn();
-
 ?>
