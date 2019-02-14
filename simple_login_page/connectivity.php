@@ -26,7 +26,6 @@ session_start(); //starting the session for user profile page
 	else
 	echo "Error! Fields are empty!";
 				 }
-
 if(isset($_POST['submit']))
 	SignIn();
 ?>
