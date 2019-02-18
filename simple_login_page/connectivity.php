@@ -25,7 +25,7 @@ session_start(); //starting the session for user profile page
 				}
 	}
 
-	if(empty($_POST[user]) OR empty($_POST[pass]))
+	else
 	{
 		if(empty($_POST[user]))
 			echo "Empty Username!";
@@ -36,8 +36,8 @@ session_start(); //starting the session for user profile page
 
 	if(empty($_POST[user]))
 		echo "Username is empty!";*/
-	else
-		echo "Error! Fields are empty!";
+		else
+			echo "Error! Fields are empty!";
 	}			 }
 if(isset($_POST[submit]))
 	signIn();
