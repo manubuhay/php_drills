@@ -23,19 +23,22 @@ session_start(); //starting the session for user profile page
 					#echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
 					header('Location: login.html');
 				}
-			else
-				echo "Username and Password do not match, wrong password or account does not exist.";
 	}
 
-	if(empty($_POST[pass]))
+	if(empty($_POST[user]) OR empty($_POST[pass]))
+	{
+		if(empty($_POST[user]))
+			echo "Empty Username!"
+		if(empty($_POST[pass]))
+			echo "Empty Password!"
+/*	if(empty($_POST[pass]))
 		echo "Password is empty!";
 
 	if(empty($_POST[user]))
-		echo "Username is empty!";
-
+		echo "Username is empty!";*/
 	else
 		echo "Error! Fields are empty!";
-				 }
+	}			 }
 if(isset($_POST[submit]))
 	signIn();
 ?>
