@@ -24,9 +24,11 @@ session_start(); //starting the session for user profile page
 					header('Location: login.html');
 				}
 	}
+	if(empty($_POST['pass']))
+		echo "Password is empty!";
+	if(empty($_POST['user']))
+		echo "Username is empty!";
 	else
-		if(empty($_POST['pass']))
-			echo "Password is empty!";
 	echo "Error! Fields are empty!";
 				 }
 if(isset($_POST['submit']))
