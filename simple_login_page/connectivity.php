@@ -28,9 +28,9 @@ session_start(); //starting the session for user profile page
 	if(empty($_POST[user]) OR empty($_POST[pass]))
 	{
 		if(empty($_POST[user]))
-			echo "Empty Username!"
+			echo "Empty Username!";
 		if(empty($_POST[pass]))
-			echo "Empty Password!"
+			echo "Empty Password!";
 /*	if(empty($_POST[pass]))
 		echo "Password is empty!";
 
