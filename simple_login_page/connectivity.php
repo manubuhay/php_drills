@@ -23,6 +23,8 @@ session_start(); //starting the session for user profile page
 					#echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
 					header('Location: login.html');
 				}
+			else
+				echo "Username and Password do not match, wrong password or account does not exist.";
 	}
 
 	if(empty($_POST[pass]))
