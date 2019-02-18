@@ -15,7 +15,7 @@ session_start(); //starting the session for user profile page
 
 	if(!empty($_POST['user']) AND !empty($_POST['pass']))
 	{
-		$query = mysql_query("SELECT * FROM UserName where userName = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysql_error());
+		$query = mysql_query("SELECT * FROM UserName where userName = '$_POST['user']' AND pass = '$_POST['pass']'") or die(mysql_error());
 		$row = mysql_fetch_array($query) or die(mysql_error());
 			if(!empty($row['userName']) AND !empty($row['pass']))
 				{
@@ -24,10 +24,13 @@ session_start(); //starting the session for user profile page
 					header('Location: login.html');
 				}
 	}
+
 	if(empty($_POST['pass']))
 		echo "Password is empty!";
+
 	if(empty($_POST['user']))
 		echo "Username is empty!";
+
 	else
 	echo "Error! Fields are empty!";
 				 }
