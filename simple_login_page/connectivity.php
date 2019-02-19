@@ -7,8 +7,6 @@ define('DB_PASSWORD','password');
 $con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error()); 
 $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
 
-$id=$_POST[user];
-
 function signIn()
  { 
 session_start(); //starting the session for user profile page
@@ -19,10 +17,10 @@ session_start(); //starting the session for user profile page
 		$row = mysql_fetch_array($query) or die(mysql_error());
 			if(!empty($row['userName']) and !empty($row['pass']))
 				{
-					if($_POST[user] == $row[userName] and $_POST[pass] == $row[pass])
+					if($_POST[user] == $row['userName'] and $_POST[pass] == $row['pass'])
 						header('Location: login.html');
 					else
-						echo "Username does not exist / Password does not match."
+						echo "Username does not exist / Password does not match.";
 				}
 	}
 	else
