@@ -27,7 +27,7 @@ session_start(); //starting the session for user profile page
 			echo "Empty Username!";
 		if(empty($_POST[pass]))
 			echo "Empty Password!";
-			echo "$_POST[user]";
+			echo "$id";
 		else
 			echo "Error! Fields are empty!";
 	}			 }
