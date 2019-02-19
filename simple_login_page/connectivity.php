@@ -10,7 +10,7 @@ $db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_
 $id=$_POST[user];
 
 function signIn()
-{ 
+ { 
 session_start(); //starting the session for user profile page
 
 	if(!empty($_POST[user]) and !empty($_POST[pass]))
@@ -23,18 +23,8 @@ session_start(); //starting the session for user profile page
 				}
 	}
 	else
-	{
-		if(empty($_POST[user]))
-			echo "Empty Username!";
-		if(empty($_POST[pass]))
-		{
-			echo "Empty Password!";
-			echo $id;
-		}
-		else
-			echo "Error! Fields are empty!";
-	}			 
-}
+	echo "Error! Field/s are missing!";			 
+ }
 if(isset($_POST[submit]))
 	signIn();
 ?>
