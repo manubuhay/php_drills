@@ -13,11 +13,11 @@ function signIn()
 { 
 session_start(); //starting the session for user profile page
 
-	if(!empty($_POST[user]) AND !empty($_POST[pass]))
+	if(!empty($_POST[user]) and !empty($_POST[pass]))
 	{
 		$query = mysql_query("SELECT * FROM UserName where userName = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysql_error());
 		$row = mysql_fetch_array($query) or die(mysql_error());
-			if(!empty($row['userName']) AND !empty($row['pass']))
+			if(!empty($row['userName']) and !empty($row['pass']))
 				{
 					header('Location: login.html');
 				}
