@@ -13,7 +13,7 @@ $pw = $_POST['pass'];
 function signIn(){ 
 session_start(); //starting the session for user profile page
 
-	if(!empty($id) AND !empty($pw))
+	if(!empty('$id') AND !empty('$pw'))
 	{
 		$query = mysql_query("SELECT * FROM UserName where userName = '$id' AND pass = '$pw'") or die(mysql_error());
 		$row = mysql_fetch_array($query) or die(mysql_error());
@@ -27,9 +27,9 @@ session_start(); //starting the session for user profile page
 
 	else
 	{
-		if(empty($id))
+		if(empty('$id'))
 			echo "Empty Username!";
-		if(empty($pw))
+		if(empty('$pw'))
 			echo "Empty Password!";
 /*	if(empty($_POST[pass]))
 		echo "Password is empty!";
