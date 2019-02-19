@@ -20,8 +20,7 @@ session_start(); //starting the session for user profile page
 					if($_POST[user] == $row['userName'] and $_POST[pass] == $row['pass'])
 						header('Location: login.html');
 					else
-						/*echo "Username does not exist. / Password does not match.";*/
-						header('Location: login.html');
+						echo "Username does not exist. / Password does not match.";
 				}
 	}
 	else
