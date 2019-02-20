@@ -20,12 +20,12 @@ session_start(); //starting the session for user profile page
 					if($_POST[user] == $row['userName'] and $_POST[pass] == $row['pass'])
 						header('Location: login.html');
 				}
-			else
-				echo "Username does not exist. / Password does not match.";	
 	}
 	else
 	echo "Error! Field/s are missing!";			 
  }
 if(isset($_POST[submit]))
 	signIn();
+else
+	echo "Error! No form submitted!";
 ?>
