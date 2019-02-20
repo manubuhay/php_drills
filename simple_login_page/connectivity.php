@@ -27,5 +27,5 @@ session_start(); //starting the session for user profile page
 if(isset($_POST[submit]))
 	signIn();
 else
-	echo "Error! No form submitted!";
+	echo "Error! No form data submitted!";
 ?>
