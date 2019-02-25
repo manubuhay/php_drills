@@ -24,7 +24,7 @@ session_start(); //starting the session for user profile page
   echo "Error! Field/s are missing!";			 
   }
 if(isset($_POST[submit]))
-	signIn();
+ signIn();
 else
-	echo "Error! No form data submitted!";
+ echo "Error! No form data submitted!";
 ?>
